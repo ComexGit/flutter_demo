@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/BottomNavigationWidget.dart';
+import 'widgets/BottomAppBarWidget.dart';
 
 void main() => runApp(MainDemo());
 
@@ -9,11 +10,11 @@ class MainDemo extends StatelessWidget {
     return MaterialApp(
         home: HomePage(),
         theme: ThemeData(
-          primaryColor: Colors.lightBlue[800],
-		  primarySwatch: Colors.deepPurple,
-          accentColor: Colors.cyan[900],
+        //   primaryColor: Colors.white, //导航栏、状态栏颜色
+		  primarySwatch: Colors.lightBlue, 
+        //   accentColor: Colors.cyan[900],
         ));
-  }
+   }
 }
 
 class HomePage extends StatelessWidget {
@@ -22,16 +23,17 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('FlutterDemo'),
+		// elevation: 10.0,
       ),
       drawer: Drawer(
         child: HomeDrawer(
           titles: [
             "BottomNavigationWidget",
-            "BottomNavigationWidget",
+            "BottomAppBarWidget",
           ],
           widgets: <Widget>[
             BottomNavigationWidget(),
-            BottomNavigationWidget(),
+            BottomAppBarWidget(),
           ],
         ),
       ),
@@ -52,6 +54,7 @@ class HomeDrawer extends StatelessWidget {
         padding: const EdgeInsets.only(),
         itemCount: titles.length + 2,
         itemBuilder: (BuildContext context, int index) {
+
           if (index == 0) {
             return UserAccountsDrawerHeader(
               accountName: Text('YuQian'),
@@ -64,7 +67,9 @@ class HomeDrawer extends StatelessWidget {
               },
               margin: EdgeInsets.only(),
             );
+
           } else if (index == 1) {
+
             return AboutListTile(
               icon: CircleAvatar(
                   child: IconButton(
@@ -83,7 +88,9 @@ class HomeDrawer extends StatelessWidget {
                 Text("\nA flutter demo."),
               ],
             );
+
           } else {
+			  
             int i = index - 2;
             return ListTile(
               leading: CircleAvatar(
