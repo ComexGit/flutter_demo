@@ -11,8 +11,8 @@ class _EachViewState extends State<EachView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(title:Text(widget.title)),
-      body: Center(child:Text(widget.title)),
+      appBar: AppBar(title: Text(widget.title)),
+      body: Center(child: Text(widget.title)),
     );
   }
 }
