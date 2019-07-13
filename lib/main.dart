@@ -4,6 +4,9 @@ import 'widgets/BottomAppBarWidget.dart';
 import 'widgets/BackdropFilterWidget.dart';
 import 'widgets/TabBarWidget.dart';
 import 'widgets/SearchBarWidget.dart';
+import 'widgets/WrapWidget.dart';
+import 'widgets/ExpansionTileWidget.dart';
+import 'widgets/ExpansionPanelListWidget.dart';
 
 void main() => runApp(MainDemo());
 
@@ -36,6 +39,9 @@ class HomePage extends StatelessWidget {
             "BackdropFilterWidget",
             "TabBarWidget",
             "SearchBarWidget",
+            "WrapWidget",
+            "ExpansionTileWidget",
+            "ExpansionPanelListWidget",
           ],
           widgets: <Widget>[
             BottomNavigationWidget(),
@@ -43,6 +49,9 @@ class HomePage extends StatelessWidget {
             FrostedClass(),
             TabBarWidget(),
             SearchBarWidget(),
+            WrapWidget(),
+            ExpansionTileWidget(),
+            ExpansionPanelListWidget(),
           ],
         ),
       ),
