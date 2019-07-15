@@ -7,6 +7,7 @@ import 'widgets/SearchBarWidget.dart';
 import 'widgets/WrapWidget.dart';
 import 'widgets/ExpansionTileWidget.dart';
 import 'widgets/ExpansionPanelListWidget.dart';
+import 'widgets/BezierCurveWidget.dart';
 
 void main() => runApp(MainDemo());
 
@@ -14,6 +15,10 @@ class MainDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        // debugShowCheckedModeBanner: false,
+        // debugShowMaterialGrid: true,
+        // showPerformanceOverlay: true,
+        // showSemanticsDebugger: true,
         home: HomePage(),
         theme: ThemeData(
           //   primaryColor: Colors.white, //导航栏、状态栏颜色
@@ -42,6 +47,7 @@ class HomePage extends StatelessWidget {
             "WrapWidget",
             "ExpansionTileWidget",
             "ExpansionPanelListWidget",
+            "BezierCurveWidget",
           ],
           widgets: <Widget>[
             BottomNavigationWidget(),
@@ -52,6 +58,7 @@ class HomePage extends StatelessWidget {
             WrapWidget(),
             ExpansionTileWidget(),
             ExpansionPanelListWidget(),
+            BezierCurveWidget(),
           ],
         ),
       ),

@@ -33,6 +33,17 @@ class _ExpansionPanelListWidgetState extends State<ExpansionPanelListWidget> {
   }
 
   Widget build(BuildContext context) {
+
+//  List numList = [1,2,3,4];
+//  var mapTest = numList.map((f)=> f*5);
+//   print(mapTest); //转化成一个map
+//   print("mapTest的长度"+ mapTest.length.toString());
+//   mapTest.forEach((f){
+//     print(f);
+//   });
+// var a = mapTest.toList();//转化成list
+//   print(a);
+
     return Scaffold(
         appBar: AppBar(title: Text("expansion panel list")),
         //加入可滚动组件
