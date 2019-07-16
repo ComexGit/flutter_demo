@@ -8,6 +8,8 @@ import 'widgets/WrapWidget.dart';
 import 'widgets/ExpansionTileWidget.dart';
 import 'widgets/ExpansionPanelListWidget.dart';
 import 'widgets/BezierCurveWidget.dart';
+import 'widgets/SplashScreenWidget.dart';
+import 'widgets/RightBackWidget.dart';
 
 void main() => runApp(MainDemo());
 
@@ -48,6 +50,8 @@ class HomePage extends StatelessWidget {
             "ExpansionTileWidget",
             "ExpansionPanelListWidget",
             "BezierCurveWidget",
+            "SplashScreenWidget",
+            "RightBackWidget",
           ],
           widgets: <Widget>[
             BottomNavigationWidget(),
@@ -59,6 +63,8 @@ class HomePage extends StatelessWidget {
             ExpansionTileWidget(),
             ExpansionPanelListWidget(),
             BezierCurveWidget(),
+            SplashScreenWidget(),//push出来的，会有闪屏，直接添加在home上则不会
+            RightBackWidget(),
           ],
         ),
       ),
